@@ -1,0 +1,38 @@
+{
+  "name": "customize-dropdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/code-frame": "^7.24.7",
+    "@chromatic-com/storybook": "^1.6.0",
+    "@storybook/addon-essentials": "^8.1.11",
+    "@storybook/addon-interactions": "^8.1.11",
+    "@storybook/addon-links": "^8.1.11",
+    "@storybook/addon-onboarding": "^8.1.11",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.4",
+    "@storybook/blocks": "^8.1.11",
+    "@storybook/react": "^8.1.11",
+    "@storybook/react-webpack5": "^8.1.11",
+    "@storybook/test": "^8.1.11",
+    "gh-pages": "^6.1.1",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.1.11",
+    "tailwindcss": "^3.4.4"
+  }
+}
