@@ -7,16 +7,27 @@ module.exports = {
     filename: 'bundle.js',
     library: 'customize-dropdown',
     libraryTarget: 'umd',
+    publicPath: 'custom-dropdown'
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        },
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
 };
