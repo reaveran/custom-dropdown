@@ -1,13 +1,15 @@
 const path = require('path');
- 
+const HmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-  entry: './index.js',
+  entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     library: 'customize-dropdown',
     libraryTarget: 'umd',
-    publicPath: 'custom-dropdown'
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -30,4 +32,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: './index.html',
+    })
+  ]
 };

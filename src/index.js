@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Dropdown } from './src/Dropdown/Dropdown';
+import { Dropdown } from './Dropdown/Dropdown';
 
 const options = [{
   key: '1',
@@ -34,11 +34,14 @@ const options = [{
   value: 'Long long option 10 Long long option 4 Long long option 4 Long long option 4 Long long option 4'
 }];
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <div>
+function App() {
+  return (
+    <div style={{ padding: 16 }}>
       <Dropdown options={options} />
     </div>
-  </React.StrictMode>
-);
+  )
+}
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<App />);
