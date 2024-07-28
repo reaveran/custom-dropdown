@@ -1,8 +1,11 @@
 {
   "name": "customize-dropdown",
+  "description": "A customizable dropdown component for React.",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://reaveran.github.io/custom-dropdown",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@types/node": "^16.18.104",
     "@types/react": "^18.3.3",
@@ -14,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
